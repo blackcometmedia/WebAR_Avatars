@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "RPM Avatar Viewer";
+    ViewData["Avatar_src"] = "";
+
+    if (TempData["Avatar_src"] != null)
+    {
+        ViewData["Avatar_src"] = TempData["Avatar_src"].ToString();
+    }
+}
+
+<style>
+  #modelviewer {
+    height: 400px;
+    width: 100%;
+  }
+</style>
+
+<div class="row w-100" style="margin: 0px;">
+    <div class="col-12 text-center">
+        <h1 class="display-4">Avatar Viewer</h1>
+    </div>
+
+    <div class="col-12 w-100">
+        <model-viewer id="modelviewer" alt="Ready Player Me Avatar"
+        src="@ViewData["Avatar_src"]" shadow-intensity="1" camera-controls
+        touch-action="pan-y">
+    </model-viewer>
+    </div>
+</div>

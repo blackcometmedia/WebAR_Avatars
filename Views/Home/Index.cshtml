@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="row w-100" style="margin: 0px;">
+    <div class="col-12 text-center">
+        <h1 class="display-4">Immerse GT 2023 - WebAR Avatars</h1>
+    </div>
+
+    <div class="col-12 w-100 text-center" style="margin-top: 40px;">
+        <div class="d-inline">
+            <button onclick="location.href='@Url.Action("Create", "Avatar")'" class="btn btn-primary" style="height: 42px;">Create Avatar</button>
+        </div>
+        <div class="d-inline">
+            <button onclick="location.href='@Url.Action("LoadAvatar", "Avatar")'" class="btn btn-primary" style="height: 42px;">Load Avatar</button>
+        </div>
+    </div>
+</div>

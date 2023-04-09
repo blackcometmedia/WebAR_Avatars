@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "RPM Avatar Loader";
+}
+
+<div class="row w-100" style="margin: 0px;">
+    <div class="col-12 text-center">
+      <img height="100px;" src="https://cdn.glitch.global/3354b915-2147-49b3-8927-9feb031cb867/ReadyPlayerMe-Logo.png?v=1681013428100" alt="RPM_logo"/>    
+    </div>
+    <div class="col-12 text-center">
+        <h1 class="display-4">Avatar Loader</h1>
+    </div>   
+    <div class="col-12" style="padding-top: 60px;">
+        <div class="col-12 text-center form-group">
+            @using (Html.BeginForm("Load", "Avatar", FormMethod.Post))
+            {
+                  <div class="d-inline">
+                    <input name="avatar_url" type="text" style="height: 42px;" placeholder=".glb Avatar URL" />
+                  </div>
+                  <div class="d-inline">
+                    <button class="btn btn-primary" style="border-color: black;">Load</button>
+                  </div>
+            }
+        </div>
+    </div>
+</div>
